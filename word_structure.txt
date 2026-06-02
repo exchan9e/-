@@ -1,0 +1,853 @@
+=== 完整文档段落结构 ===
+段落0 [Normal]: (空)
+段落1 [Normal]: 2024学年春季学期
+段落2 [Normal]: 《数据处理与建模》
+段落3 [Normal]: 期 终 课 程 报 告
+段落4 [Normal]: (空)
+段落5 [Normal]: 报告名称        数据处理与建模案例        
+段落6 [Normal]: (空)
+段落7 [Normal]: 学生姓名                         
+段落8 [Normal]: (空)
+段落9 [Normal]: 学    号                    
+段落10 [Normal]: (空)
+段落11 [Normal]: 2025年4月16日
+段落12 [Body Text Indent]: (空)
+段落13 [Heading 1]: 主成分分析案例
+段落14 [Normal]: 本案例选用张京新等[1]在《环境科学》期刊发表的《渭河流域水质分析评价及预测模型》。
+段落15 [Heading 2]: 主成分分析的应用背景
+段落16 [Normal]: 在水质评价研究中，通常需要考虑众多的水质指标，这些指标之间往往存在着复杂的相关性，使得分析过程繁琐且难以抓住关键问题。主成分分析法（PCA）作为一种多元统计分析方法，能够通过线性变换将原始数据映射到新的坐标系，将大量相关变量转换为少数几个不相关且包含原始数据大部分信息的主成分，从而实现数据降维和特征提取。各个主成分包含的信息不重叠，彼此不相关，原始变量的大部分信息都被反映出来，在样本众多的情况下仍可以筛选出主要污染因子，在水质评价分析中应用广泛。在本研究中，面对渭河流域众多的水质监测指标以及复杂的污染情况，主成分分析法可以帮助筛选出主要的污染物因子，简化水质评价模型，更清晰地揭示流域水质的污染特征和规律，为深入分析水质状况及其驱动因素提供有力支持。
+段落17 [Heading 2]: 主成分分析的应用方式
+段落18 [Normal]: 收集了渭河流域2021年1月至2024年3月的水质监测数据，包括逐月水质数据和逐日水质自动监测数据。分别按渭河干流上游断面、渭河干流中下游断面、北洛河和泾河支流断面、北岸其他支流和南岸支流断面以及全流域各断面春夏秋冬四季分别对DO、Ec、ZD、高锰酸盐指数、COD、BOD5、NH3-N、TP、TN、F-、Cr6+和LAS这12项水质监测指标进行主成分分析，在进行主成分分析之前，首先对数据进行了标准化处理，以消除不同指标量纲和数量级差异的影响，使各指标具有可比性。
+段落19 [Normal]: 将预处理后的水质数据进行主成分分析，计算协方差矩阵或相关系数矩阵，并求解其特征值和特征向量。根据特征值大于1的原则确定主成分的数量，并通过累计贡献率评估所选主成分对原始数据的代表性。在本研究中，通过PCA计算分别得到了在不同空间分组（如渭河干流上游、中下游、北洛河和泾河支流等）和时间分组（春夏秋冬四季）下的主成分及其贡献率。
+段落20 [Normal]: 分析各主成分的载荷系数，确定每个主成分所代表的原始变量组合，即识别出影响水质的主要污染物因子。例如，在渭河干流上游，第一主成分主要反映水体富营养化的NH3-N、TP和TN以及反映有机污染的高锰酸盐指数、COD和BOD5等指标；第二主成分主要与F-相关；第三主成分则主要受DO的影响。
+段落21 [图]: (空)
+段落22 [图]: 图 1-1不同时空分组的PCA载荷
+段落23 [Heading 2]: 主成分分析结果
+段落24 [Normal]: 从空间分组的主成分分析结果来看，渭河干流上游断面及北岸其他支流和南岸支流断面的第一主成分贡献率较高，均在50%左右，且PC1主要影响因子均为反映水体富营养化的NH3-N、TP和TN以及反映有机污染的高锰酸盐指数和COD等指标，这表明这些区域的水质主要受农业生产和生活废水等影响，以有机污染和富营养化营养盐污染为主。
+段落25 [Normal]: 从时间分组的主成分分析结果来看，全流域夏秋冬三个季节PC1主要影响因子主要是有机污染高锰酸盐指数和COD，并存在不同程度的营养盐污染。夏季TP对PC1起重要影响，秋冬季TP和NH3-N 则共同对PC1产生影响。春季有机污染和富营养化营养盐指标主要影响PC2，仅COD作为有机污染指标与Ec、TN、F-和Cr6+共同影响了PC1。这表明不同季节流域水质的主要污染物存在差异，有机污染和富营养化污染在多数季节占据主导地位，但在春季相对有所变化。
+段落26 [Heading 1]: 相关性分析案例
+段落27 [Normal]: 本案例选用刘星宇等[2]在《环境科学》期刊发表的《甘肃省1981～2020年植被覆盖度时空变化特征及气候因子分析》。
+段落28 [Heading 2]: 相关性分析的应用背景
+段落29 [Normal]: 甘肃省地形复杂，气候多样，植被覆盖状况及其变化特征存在显著差异。研究其植被覆盖度的时空变化特征及气候因子影响，有助于揭示该地区的生态变化特征，为生态保护和可持续发展提供科学依据。在研究植被覆盖度与气候因子之间的关系时，需要分析两个变量之间的线性关系。Pearson相关系数是衡量两个数据集之间相关性大小和方向的常用指标，在生态学、气象学等领域的相关性分析中广泛应用。
+段落30 [Heading 2]: 相关性分析的应用方式
+段落31 [Normal]: 使用Person相关系数测量FVC与年度均温和降水量之间的线性关系。
+段落32 [Normal]: (空)
+段落33 [Normal]: 式中，rxy为x和y的相关系数，和𝑦̅为变量x和y的均值。根据计算结果结合显著性P值，将相关性分为5个等级：极显著正相关（r≥0.5，P<0.01），显著正相关（0.25≤r<0.5，P<0.05），不显著相关（|𝑟|<0.25，P≥0.05），显著负相关（−0.5<r≤−0.25，P<0.05），极显著负相关（r≤−0.5，P<0.01）。
+段落34 [图标题-中文]: (空)
+段落35 [Heading 2]: 相关性分析结果
+段落36 [Normal]: 从 NOAA CDR AVHRR 数据集中获取1981-2020年间的逐年平均温度和逐年降水量数据，分析甘肃省不同地区的气候因子年际变化特征。采用Pearson相关性分析方法，研究FVC与年度均温和降水量之间的相关性。计算不同区域、不同土地利用类型下FVC与气温、降水量的相关系数，结合显著性P值，分析植被覆盖度与气候因子之间的关系。得出甘肃省 1981 - 2020 年植被覆盖度时空变化特征及气候因子分析的相应结果，为该地区的生态保护和可持续发展提供科学依据和决策支持。
+段落37 [图]: (空)
+段落38 [图标题-中文]: 图 2-1 1981~2020年甘肃省年际FVC变化与年度均温的相关分析
+段落39 [图]: (空)
+段落40 [图标题-中文]: 图 2-2 1981~2020年甘肃省年际FVC变化与年降水总量的相关分析
+段落41 [Heading 1]: EFDC模型案例
+段落42 [Normal]: 本案例选用刘成真等[3]在《环境科学》期刊发表的《九洲江下游（广西段）水华暴发影响因子分析》。
+段落43 [Heading 2]: EFDC模型的应用背景
+段落44 [Normal]: 在水环境研究领域，传统的监测手段虽然能够提供一定的数据支持，但对于复杂水体环境中的水华暴发机制和影响因子分析存在一定的局限性。EFDC模型作为一种先进的水动力水质模型，能够模拟水体的流动、混合、扩散等物理过程以及污染物在水体中的传输和转化，为研究水华暴发的成因和影响因子提供了强大的工具。通过结合实测数据和模型模拟结果，可以更全面、深入地了解水华暴发的时空变化特征及其驱动因素。
+段落45 [Heading 2]: EFDC模型的应用方式
+段落46 [Normal]: 先构建与设置模型。根据九洲江下游（广西段）的地理特征和研究需求，将研究区域划分为多个网格单元，采用正交曲线网格划分方式，最终划分为1566个网格，平均网格分辨率为110 m×110 m，以满足模型对水动力和水质模拟的精度要求。模型采用冷启动方式，初始水位设定为33.08 m，初始流速设定为0 m/s，并设置动态时间步长，最小步长为0.1 s，安全系数为0.1，以确保模型运行的稳定性和效率。再率定与验证模型，分别对车田断面的流量以及山角断面的 TP、TN 等关键水质指标进行率定和验证。采用决定系数（R²）、均方根误差（RMSE）、相对误差和绝对误差等指标对模型的模拟结果进行评估，验证结果显示，流量、TP和TN的相对误差均在30%以内，R²分别为0.93、0.76、0.73，表明模型能够较好地模拟九洲江下游（广西段）的水动力和水质变化过程，具有较高的准确性和可靠性。
+段落47 [图]: (空)
+段落48 [图标题-中文]: 图 3-1车田断面流量率定验证图
+段落49 [图]: (空)
+段落50 [图标题-中文]: 图 3-2山角断面TP率定验证图
+段落51 [Heading 2]: EFDC模型的结果
+段落52 [Normal]: 通过EFDC模型模拟得到的2020-2022年九洲江下游（广西段）叶绿素a数据，分析其年际变化和年内变化特征。结果显示，2022年水华情况相对较严重，叶绿素a浓度较高；水华暴发主要集中在夏秋两季，秋季水华程度重于夏季，这表明九洲江下游（广西段）水华暴发具有明显的季节性规律。
+段落53 [Heading 1]: AHP模型案例
+段落54 [Normal]: 本案例选用詹咏等[4]在《环境科学》期刊发表的《上海污水厂污泥园林绿化利用潜力与复合生态风险评估》。
+段落55 [Heading 2]: AHP模型的应用背景
+段落56 [Normal]: 在资源化利用污泥的过程中，必须全面评估污泥的肥力特性和潜在生态风险。污泥中含有重金属和多环芳烃等污染物，这些物质可能对生态系统造成长期的累积性危害。因此，需要一种综合性的评估方法，能够同时考虑多种污染物的生态效应，为污泥的安全利用提供科学依据。层次分析法（AHP）作为一种有效的多准则决策工具，能够将复杂的环境问题分解为多个层次，通过成对比较和权重计算，定量评估各污染物的风险贡献。
+段落57 [Heading 2]: AHP模型的应用方式
+段落58 [Normal]: 构建了以污泥污染评价为目标层，涵盖8种重金属（Hg、As、Cd、Cr、Cu、Ni、Pb、Zn）和不同环状多环芳烃（二至六环）的指标层。目标层旨在综合评估污泥的污染状况，而准则层由各污染物的具体指标构成。
+段落59 [Normal]: 采用三标度AHP法确定各指标的权重，构建判断矩阵，依据污泥中污染物的生态风险标准（ERL和ERM）对各指标的重要性进行比较。
+段落60 [表标题-中文]: 表格 1上海污水污泥污染评价指标的权重
+段落61 [Normal]: 基于各污染物的测定值和权重，计算各污水厂污泥的综合风险得分。计算公式为各污染物得分与其权重的乘积之和：
+段落62 [Normal]: (空)
+段落63 [Heading 2]: AHP模型的结果
+段落64 [Normal]: 上海市10个典型污水厂污泥样本的有机质含量范围为251～439 g·kg⁻¹，总养分含量为22.7～51.3 g·kg⁻¹，平均值为41.7 g·kg⁻¹。70%的污泥样本满足《有机肥料》标准，全部符合园林绿化用泥质标准。综合肥力系数平均为1.8，接近“肥沃”标准，表明污泥具备较高的肥力水平。通过AHP模型计算得出，上海污水厂污泥的综合污染评价得分为0.366，处于较低水平。这表明污泥整体生态风险较小，适合用于园林绿化。然而，长期施用时需关注Hg和Ni的潜在累积风险。AHP模型为污泥的综合风险评估提供了科学依据，有助于优化污泥的资源化利用策略。
+段落65 [Heading 1]: 参考文献
+段落66 [List Paragraph]: 张京新,蔡庆旺,康子怡,等.渭河流域水质分析评价及预测模型[J/OL].环境科学,1-32[2025-06-15].
+段落67 [List Paragraph]: 刘星宇,张美玲,马子茗.甘肃省1981～2020年植被覆盖度时空变化特征及气候因子分析[J/OL].环境科学,1-11[2025-06-16].
+段落68 [List Paragraph]: 刘成真,孙明东,谢培,等.九洲江下游（广西段）水华暴发影响因子分析[J].环境科学与技术,2025,48(01):81-91.
+段落69 [List Paragraph]: 詹咏,杨超淇,王慧,等.上海污水厂污泥园林绿化利用潜力与复合生态风险评估[J/OL].环境科学,1-19[2025-06-15].
+
+=== 文档表格 ===
+
+表格0: 2行 x 11列
+  [0,0]: Hg
+  [0,1]: 六环类多环芳烃
+  [0,2]: 二环类多环芳烃
+  [0,3]: 三环类多环芳烃
+  [0,4]: Cd
+  [0,5]: Cr
+
+  [0,6]: Cu
+  [0,7]: Ni
+  [0,8]: As
+  [0,9]: Pb
+  [0,10]: Zn
+  [1,0]: 0.273
+  [1,1]: 0.170
+  [1,2]: 0.129
+  [1,3]: 0.102
+  [1,4]: 0.083
+  [1,5]: 0.054
+  [1,6]: 0.033
+  [1,7]: 0.033
+  [1,8]: 0.024
+  [1,9]: 0.016
+  [1,10]: 0.003
+
+=== 段落格式详情 ===
+
+段落1: "2024学年春季学期..."
+  Run: "20" | bold=True | size=228600 | name=None
+  Run: "24" | bold=True | size=228600 | name=None
+  Run: "学年春季学期" | bold=True | size=228600 | name=None
+
+段落2: "《数据处理与建模》..."
+  Run: "《" | bold=True | size=330200 | name=None
+  Run: "数据处理与建模" | bold=True | size=330200 | name=None
+  Run: "》" | bold=True | size=330200 | name=None
+
+段落3: "期 终 课 程 报 告..."
+  Run: "期" | bold=True | size=457200 | name=None
+  Run: " " | bold=True | size=457200 | name=None
+  Run: "终" | bold=True | size=457200 | name=None
+  Run: " " | bold=True | size=457200 | name=None
+  Run: "课" | bold=True | size=457200 | name=None
+  Run: " " | bold=True | size=457200 | name=None
+  Run: "程" | bold=True | size=457200 | name=None
+  Run: " " | bold=True | size=457200 | name=None
+  Run: "报" | bold=True | size=457200 | name=None
+  Run: " " | bold=True | size=457200 | name=None
+  Run: "告" | bold=True | size=457200 | name=None
+
+段落5: "报告名称        数据处理与建模案例        ..."
+  Run: "报告名称" | bold=None | size=228600 | name=None
+  Run: " " | bold=None | size=203200 | name=None
+  Run: "    " | bold=None | size=203200 | name=None
+  Run: "  " | bold=None | size=203200 | name=None
+  Run: " " | bold=None | size=203200 | name=None
+  Run: "数据处理与建模案例" | bold=None | size=203200 | name=None
+  Run: " " | bold=None | size=203200 | name=None
+  Run: " " | bold=None | size=203200 | name=None
+  Run: " " | bold=None | size=203200 | name=None
+  Run: "  " | bold=None | size=203200 | name=None
+  Run: "   " | bold=None | size=203200 | name=None
+
+段落7: "学生姓名                         ..."
+  Run: "学生姓名" | bold=None | size=228600 | name=None
+  Run: "       " | bold=None | size=228600 | name=None
+  Run: " " | bold=None | size=228600 | name=None
+  Run: "         " | bold=None | size=228600 | name=None
+  Run: " " | bold=None | size=228600 | name=None
+  Run: "  " | bold=None | size=228600 | name=None
+  Run: " " | bold=None | size=228600 | name=None
+  Run: "    " | bold=None | size=228600 | name=None
+
+段落9: "学    号                    ..."
+  Run: "学" | bold=None | size=228600 | name=None
+  Run: "    " | bold=None | size=228600 | name=None
+  Run: "号" | bold=None | size=228600 | name=None
+  Run: "      " | bold=None | size=228600 | name=None
+  Run: "  " | bold=None | size=228600 | name=None
+  Run: "       " | bold=None | size=228600 | name=None
+  Run: " " | bold=None | size=228600 | name=None
+  Run: "    " | bold=None | size=228600 | name=None
+
+段落11: "2025年4月16日..."
+  Run: "20" | bold=None | size=203200 | name=None
+  Run: "2" | bold=None | size=203200 | name=None
+  Run: "5" | bold=None | size=203200 | name=None
+  Run: "年" | bold=None | size=203200 | name=None
+  Run: "4" | bold=None | size=203200 | name=None
+  Run: "月" | bold=None | size=203200 | name=None
+  Run: "16" | bold=None | size=203200 | name=None
+  Run: "日" | bold=None | size=203200 | name=None
+
+段落13: "主成分分析案例..."
+  Run: "主成分分析案例" | bold=None | size=None | name=None
+
+段落14: "本案例选用张京新等[1]在《环境科学》期刊发表的《渭河流域水质分析评价及预测模型》。..."
+  Run: "本案例选用" | bold=None | size=None | name=None
+  Run: "张京新" | bold=None | size=None | name=None
+  Run: "等" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "[1]" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "在《环境科学》期刊发表的《" | bold=None | size=None | name=None
+  Run: "渭河流域水质分析评价及预测模型" | bold=None | size=None | name=None
+  Run: "》。" | bold=None | size=None | name=None
+
+段落15: "主成分分析的应用背景..."
+  Run: "主成分分析的应用背景" | bold=None | size=None | name=None
+
+段落16: "在水质评价研究中，通常需要考虑众多的水质指标，这些指标之间往往存在着复杂的相关性，使得分析过程繁琐且难以抓住关键问题。主成分分析法（PCA）作为一种多元统计分析..."
+  Run: "在水质评价研究中，通常需要考虑众多的水质指标，这些指标之间往往存在着复杂的相关性，使得分析过程繁琐且难以抓住关键问题。主" | bold=None | size=None | name=None
+  Run: "法" | bold=None | size=None | name=None
+  Run: "（" | bold=None | size=None | name=None
+  Run: "PCA" | bold=None | size=None | name=None
+  Run: "）作为一种多元统计分析方法，能够通过线性变换将原始数据映射到新的坐标系，将大量相关变量转换为少数几个不相关且包含原始数据" | bold=None | size=None | name=None
+  Run: "各个主成分包含的信息不重叠，彼此不相关，原始变量的大部分信息都被反映出来，在样本众多的情况下仍可以筛选出主要污染因子，在" | bold=None | size=None | name=None
+  Run: "在本研究中，面对渭河流域众多的水质监测指标以及复杂的污染情况，主成分分析" | bold=None | size=None | name=None
+  Run: "法" | bold=None | size=None | name=None
+  Run: "可以帮助筛选出主要的污染物因子，简化水质评价模型，更清晰地揭示流域水质的污染特征和规律，为深入分析水质状况及其驱动因素提" | bold=None | size=None | name=None
+
+段落17: "主成分分析的应用方式..."
+  Run: "主成分分析的" | bold=None | size=None | name=None
+  Run: "应用方式" | bold=None | size=None | name=None
+
+段落18: "收集了渭河流域2021年1月至2024年3月的水质监测数据，包括逐月水质数据和逐日水质自动监测数据。分别按渭河干流上游断面、渭河干流中下游断面、北洛河和泾河支流..."
+  Run: "收集了渭河流域" | bold=None | size=None | name=None
+  Run: "2021" | bold=None | size=None | name=None
+  Run: "年" | bold=None | size=None | name=None
+  Run: "1" | bold=None | size=None | name=None
+  Run: "月至" | bold=None | size=None | name=None
+  Run: "2024" | bold=None | size=None | name=None
+  Run: "年" | bold=None | size=None | name=None
+  Run: "3" | bold=None | size=None | name=None
+  Run: "月的水质监测数据，包括逐月水质数据和逐日水质自动监测数据。" | bold=None | size=None | name=None
+  Run: "分别按渭河干流上游断面、渭河干流中下游断面、北洛河和泾河支流断面、北岸其他支流和南岸支流断面以及全流域各断面春夏秋冬四季" | bold=None | size=None | name=None
+  Run: "DO" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "Ec" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "ZD" | bold=None | size=None | name=None
+  Run: "、高锰酸盐指数、" | bold=None | size=None | name=None
+  Run: "COD" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "BOD5" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "NH3-N" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "TP" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "TN" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "F-" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "Cr6+" | bold=None | size=None | name=None
+  Run: "和" | bold=None | size=None | name=None
+  Run: "LAS" | bold=None | size=None | name=None
+  Run: "这" | bold=None | size=None | name=None
+  Run: "12" | bold=None | size=None | name=None
+  Run: "项水质监测指标进行主成分分析" | bold=None | size=None | name=None
+  Run: "，" | bold=None | size=None | name=None
+  Run: "在进行主成分分析之前，首先对数据进行了标准化处理，以消除不同指标量纲和数量级差异的影响，使各指标具有可比性。" | bold=None | size=None | name=None
+
+段落19: "将预处理后的水质数据进行主成分分析，计算协方差矩阵或相关系数矩阵，并求解其特征值和特征向量。根据特征值大于1的原则确定主成分的数量，并通过累计贡献率评估所选主成..."
+  Run: "将预处理后的水质数据进行主成分分析，计算协方差矩阵或相关系数矩阵，并求解其特征值和特征向量。根据特征值大于" | bold=None | size=None | name=None
+  Run: "1" | bold=None | size=None | name=None
+  Run: "的原则确定主成分的数量，并通过累计贡献率评估所选主成分对原始数据的代表性。在本研究中，通过" | bold=None | size=None | name=None
+  Run: "PCA" | bold=None | size=None | name=None
+  Run: "计算分别得到了在不同空间分组（如渭河干流上游、中下游、北洛河和泾河支流等）和时间分组（春夏秋冬四季）下的主成分及其贡献率" | bold=None | size=None | name=None
+
+段落20: "分析各主成分的载荷系数，确定每个主成分所代表的原始变量组合，即识别出影响水质的主要污染物因子。例如，在渭河干流上游，第一主成分主要反映水体富营养化的NH3-N、..."
+  Run: "分析各主成分的载荷系数，确定每个主成分所代表的原始变量组合，即识别" | bold=None | size=None | name=None
+  Run: "出影响水质的主要污染物因子。例如，在渭河干流上游，第一主成分主要反映水体富营养化的" | bold=None | size=None | name=None
+  Run: "NH3-N" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "TP" | bold=None | size=None | name=None
+  Run: "和" | bold=None | size=None | name=None
+  Run: "TN" | bold=None | size=None | name=None
+  Run: "以及反映有机污染的高锰酸盐指数、" | bold=None | size=None | name=None
+  Run: "COD" | bold=None | size=None | name=None
+  Run: "和" | bold=None | size=None | name=None
+  Run: "BOD5" | bold=None | size=None | name=None
+  Run: "等指标；第二主成分主要与" | bold=None | size=None | name=None
+  Run: "F-" | bold=None | size=None | name=None
+  Run: "相关；第三主成分则主要受" | bold=None | size=None | name=None
+  Run: "DO" | bold=None | size=None | name=None
+  Run: "的影响。" | bold=None | size=None | name=None
+
+段落22: "图 1-1不同时空分组的PCA载荷..."
+  Run: "图" | bold=None | size=None | name=None
+  Run: " " | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "1" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "-" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "1" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "不同时空分组的" | bold=None | size=None | name=None
+  Run: "PCA" | bold=None | size=None | name=None
+  Run: "载荷" | bold=None | size=None | name=None
+
+段落23: "主成分分析结果..."
+  Run: "主成分" | bold=None | size=None | name=None
+  Run: "分析结果" | bold=None | size=None | name=None
+
+段落24: "从空间分组的主成分分析结果来看，渭河干流上游断面及北岸其他支流和南岸支流断面的第一主成分贡献率较高，均在50%左右，且PC1主要影响因子均为反映水体富营养化的N..."
+  Run: "从空间分组的主成分分析结果来看，渭河干流上游断面及北岸其他支流和南岸支流断面的第一主成分贡献率较高，均在" | bold=None | size=None | name=None
+  Run: "50%" | bold=None | size=None | name=None
+  Run: "左右，且" | bold=None | size=None | name=None
+  Run: "PC1" | bold=None | size=None | name=None
+  Run: "主要影响因子均为反映水体富营养化的" | bold=None | size=None | name=None
+  Run: "NH" | bold=None | size=None | name=None
+  Run: "3" | bold=None | size=None | name=None
+  Run: "-N" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "TP" | bold=None | size=None | name=None
+  Run: "和" | bold=None | size=None | name=None
+  Run: "TN" | bold=None | size=None | name=None
+  Run: "以及反映有机污染的高锰酸盐指数" | bold=None | size=None | name=None
+  Run: "和" | bold=None | size=None | name=None
+  Run: "COD" | bold=None | size=None | name=None
+  Run: "等指标" | bold=None | size=None | name=None
+  Run: "，" | bold=None | size=None | name=None
+  Run: "这表明这些区域的水质主要受农业生产和生活废水等影响，以有机污染和富营养化营养盐污染为主。" | bold=None | size=None | name=None
+
+段落25: "从时间分组的主成分分析结果来看，全流域夏秋冬三个季节PC1主要影响因子主要是有机污染高锰酸盐指数和COD，并存在不同程度的营养盐污染。夏季TP对PC1起重要影响..."
+  Run: "从时间分组的主成分分析结果来看，全流域夏秋冬三个季节" | bold=None | size=None | name=None
+  Run: "PC1" | bold=None | size=None | name=None
+  Run: "主要影响因子主要是有机污染高锰酸盐指数" | bold=None | size=None | name=None
+  Run: "和" | bold=None | size=None | name=None
+  Run: "COD" | bold=None | size=None | name=None
+  Run: "，并存在不同程度的营养盐污染。夏季" | bold=None | size=None | name=None
+  Run: "TP" | bold=None | size=None | name=None
+  Run: "对" | bold=None | size=None | name=None
+  Run: "PC1" | bold=None | size=None | name=None
+  Run: "起重要影响，秋冬季" | bold=None | size=None | name=None
+  Run: "TP" | bold=None | size=None | name=None
+  Run: "和" | bold=None | size=None | name=None
+  Run: "NH" | bold=None | size=None | name=None
+  Run: "3" | bold=None | size=None | name=None
+  Run: "-N " | bold=None | size=None | name=None
+  Run: "则共同对" | bold=None | size=None | name=None
+  Run: "PC1" | bold=None | size=None | name=None
+  Run: "产生影响。春季有机污染和富营养化营养盐指标主要影响" | bold=None | size=None | name=None
+  Run: "PC2" | bold=None | size=None | name=None
+  Run: "，仅" | bold=None | size=None | name=None
+  Run: "COD" | bold=None | size=None | name=None
+  Run: "作为有机污染指标与" | bold=None | size=None | name=None
+  Run: "Ec" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "TN" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "F" | bold=None | size=None | name=None
+  Run: "-" | bold=None | size=None | name=None
+  Run: "和" | bold=None | size=None | name=None
+  Run: "Cr" | bold=None | size=None | name=None
+  Run: "6+" | bold=None | size=None | name=None
+  Run: "共同影响了" | bold=None | size=None | name=None
+  Run: "PC1" | bold=None | size=None | name=None
+  Run: "。这表明不同季节流域水质的主要污染物存在差异，有机污染和富营养化污染在多数季节占据主导地位，但在春季相对有所变化" | bold=None | size=None | name=None
+  Run: "。" | bold=None | size=None | name=None
+
+段落26: "相关性分析案例..."
+  Run: "相关性分析" | bold=True | size=None | name=None
+  Run: "案例" | bold=None | size=None | name=None
+
+段落27: "本案例选用刘星宇等[2]在《环境科学》期刊发表的《甘肃省1981～2020年植被覆盖度时空变化特征及气候因子分析》。..."
+  Run: "本案例选用" | bold=None | size=None | name=None
+  Run: "刘星宇" | bold=None | size=None | name=None
+  Run: "等" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "[2]" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "在《环境科学》期刊发表的《" | bold=None | size=None | name=None
+  Run: "甘肃省" | bold=None | size=None | name=None
+  Run: "1981" | bold=None | size=None | name=None
+  Run: "～" | bold=None | size=None | name=None
+  Run: "2020" | bold=None | size=None | name=None
+  Run: "年植被覆盖度时空变化特征及气候因子分析" | bold=None | size=None | name=None
+  Run: "》。" | bold=None | size=None | name=None
+
+段落28: "相关性分析的应用背景..."
+  Run: "相关性分析" | bold=None | size=None | name=None
+  Run: "的应用背景" | bold=None | size=None | name=None
+
+段落29: "甘肃省地形复杂，气候多样，植被覆盖状况及其变化特征存在显著差异。研究其植被覆盖度的时空变化特征及气候因子影响，有助于揭示该地区的生态变化特征，为生态保护和可持续..."
+  Run: "甘肃省地形复杂，气候多样，植被覆盖状况及其变化特征存在显著差异。研究其植被覆盖度的时空变化特征及气候因子影响，有助于揭示" | bold=None | size=None | name=None
+  Run: "Pearson" | bold=None | size=None | name=None
+  Run: "相关系数是衡量两个数据集之间相关性大小和方向的常用指标，在生态学、气象学等领域的相关性分析中广泛应用。" | bold=None | size=None | name=None
+
+段落30: "相关性分析的应用方式..."
+  Run: "相关性分析" | bold=None | size=None | name=None
+  Run: "的应用方式" | bold=None | size=None | name=None
+
+段落31: "使用Person相关系数测量FVC与年度均温和降水量之间的线性关系。..."
+  Run: "使用" | bold=None | size=None | name=None
+  Run: "Person" | bold=None | size=None | name=None
+  Run: "相关系数测量" | bold=None | size=None | name=None
+  Run: "FVC" | bold=None | size=None | name=None
+  Run: "与年度均温和降水量之间的线性关系。" | bold=None | size=None | name=None
+
+段落33: "式中，rxy为x和y的相关系数，和𝑦̅为变量x和y的均值。根据计算结果结合显著性P值，将相关性分为5个等级：极显著正相关（r≥0.5，P<0.01），显著正相关..."
+  Run: "式中，" | bold=None | size=None | name=None
+  Run: "r" | bold=None | size=None | name=None
+  Run: "xy" | bold=None | size=None | name=None
+  Run: "为" | bold=None | size=None | name=None
+  Run: "x" | bold=None | size=None | name=None
+  Run: "和" | bold=None | size=None | name=None
+  Run: "y" | bold=None | size=None | name=None
+  Run: "的相关系数，" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "和" | bold=None | size=None | name=None
+  Run: "𝑦" | bold=None | size=None | name=Cambria Math
+  Run: "̅" | bold=None | size=None | name=None
+  Run: "为变量" | bold=None | size=None | name=None
+  Run: "x" | bold=None | size=None | name=None
+  Run: "和" | bold=None | size=None | name=None
+  Run: "y" | bold=None | size=None | name=None
+  Run: "的均值。根据计算结果结合显著性" | bold=None | size=None | name=None
+  Run: "P" | bold=None | size=None | name=None
+  Run: "值，将相关性分为" | bold=None | size=None | name=None
+  Run: "5" | bold=None | size=None | name=None
+  Run: "个等级：极显著正相关（" | bold=None | size=None | name=None
+  Run: "r" | bold=None | size=None | name=None
+  Run: "≥" | bold=None | size=None | name=None
+  Run: "0.5" | bold=None | size=None | name=None
+  Run: "，" | bold=None | size=None | name=None
+  Run: "P<0.01" | bold=None | size=None | name=None
+  Run: "），显著正相关（" | bold=None | size=None | name=None
+  Run: "0.25" | bold=None | size=None | name=None
+  Run: "≤" | bold=None | size=None | name=None
+  Run: "r<0.5" | bold=None | size=None | name=None
+  Run: "，" | bold=None | size=None | name=None
+  Run: "P<0.05" | bold=None | size=None | name=None
+  Run: "），不显著相关（" | bold=None | size=None | name=None
+  Run: "|" | bold=None | size=None | name=None
+  Run: "𝑟" | bold=None | size=None | name=Cambria Math
+  Run: "|<0.25" | bold=None | size=None | name=None
+  Run: "，" | bold=None | size=None | name=None
+  Run: "P" | bold=None | size=None | name=None
+  Run: "≥" | bold=None | size=None | name=None
+  Run: "0.05" | bold=None | size=None | name=None
+  Run: "），显著负相关（" | bold=None | size=None | name=None
+  Run: "−0.5<r" | bold=None | size=None | name=None
+  Run: "≤" | bold=None | size=None | name=None
+  Run: "−0.25" | bold=None | size=None | name=None
+  Run: "，" | bold=None | size=None | name=None
+  Run: "P<0.05" | bold=None | size=None | name=None
+  Run: "），极显著负相关（" | bold=None | size=None | name=None
+  Run: "r" | bold=None | size=None | name=None
+  Run: "≤" | bold=None | size=None | name=None
+  Run: "−0.5" | bold=None | size=None | name=None
+  Run: "，" | bold=None | size=None | name=None
+  Run: "P<0.01" | bold=None | size=None | name=None
+  Run: "）。" | bold=None | size=None | name=None
+
+段落35: "相关性分析结果..."
+  Run: "相关性分析" | bold=None | size=None | name=None
+  Run: "结果" | bold=None | size=None | name=None
+
+段落36: "从 NOAA CDR AVHRR 数据集中获取1981-2020年间的逐年平均温度和逐年降水量数据，分析甘肃省不同地区的气候因子年际变化特征。采用Pearson..."
+  Run: "从" | bold=None | size=None | name=None
+  Run: " NOAA CDR" | bold=None | size=None | name=None
+  Run: " " | bold=None | size=None | name=None
+  Run: "AVHRR " | bold=None | size=None | name=None
+  Run: "数据集中获取" | bold=None | size=None | name=None
+  Run: "1981-2020" | bold=None | size=None | name=None
+  Run: "年间的逐年平均温度和逐年降水量数据，分析甘肃省不同地区的气候因子年际变化特征。采用" | bold=None | size=None | name=None
+  Run: "Pearson" | bold=None | size=None | name=None
+  Run: "相关性分析方法，研究" | bold=None | size=None | name=None
+  Run: "FVC" | bold=None | size=None | name=None
+  Run: "与年度均温和降水量之间的相关性。计算不同区域、不同土地利用类型下" | bold=None | size=None | name=None
+  Run: "FVC" | bold=None | size=None | name=None
+  Run: "与气温、降水量的相关系数，结合显著性" | bold=None | size=None | name=None
+  Run: "P" | bold=None | size=None | name=None
+  Run: "值，分析植被覆盖度与气候因子之间的关系。" | bold=None | size=None | name=None
+  Run: "得出甘肃省" | bold=None | size=None | name=None
+  Run: " 1981 - 2020 " | bold=None | size=None | name=None
+  Run: "年植被覆盖度时空变化特征及气候因子分析的相应结果，为该地区的生态保护和可持续发展提供科学依据和决策支持。" | bold=None | size=None | name=None
+
+段落38: "图 2-1 1981~2020年甘肃省年际FVC变化与年度均温的相关分析..."
+  Run: "图" | bold=None | size=None | name=None
+  Run: " " | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "2" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "-" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "1" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: " " | bold=None | size=None | name=None
+  Run: "1981~2020" | bold=None | size=None | name=None
+  Run: "年甘肃省年际" | bold=None | size=None | name=None
+  Run: "FVC" | bold=None | size=None | name=None
+  Run: "变化与年度均温的相关分析" | bold=None | size=None | name=None
+
+段落40: "图 2-2 1981~2020年甘肃省年际FVC变化与年降水总量的相关分析..."
+  Run: "图" | bold=None | size=None | name=None
+  Run: " " | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "2" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "-" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "2" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: " " | bold=None | size=None | name=None
+  Run: "1981~2020" | bold=None | size=None | name=None
+  Run: "年甘肃省年际" | bold=None | size=None | name=None
+  Run: "FVC" | bold=None | size=None | name=None
+  Run: "变化与年降水总量的相关分析" | bold=None | size=None | name=None
+
+段落41: "EFDC模型案例..."
+  Run: "EFDC" | bold=None | size=None | name=None
+  Run: "模型" | bold=None | size=None | name=None
+  Run: "案例" | bold=None | size=None | name=None
+
+段落42: "本案例选用刘成真等[3]在《环境科学》期刊发表的《九洲江下游（广西段）水华暴发影响因子分析》。..."
+  Run: "本案例选用" | bold=None | size=None | name=None
+  Run: "刘成真" | bold=None | size=None | name=None
+  Run: "等" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "[3]" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "在《环境科学》期刊发表的《九洲江下游（广西段）水华暴发影响因子分析》。" | bold=None | size=None | name=None
+
+段落43: "EFDC模型的应用背景..."
+  Run: "EFDC" | bold=None | size=None | name=None
+  Run: "模型的应用背景" | bold=None | size=None | name=None
+
+段落44: "在水环境研究领域，传统的监测手段虽然能够提供一定的数据支持，但对于复杂水体环境中的水华暴发机制和影响因子分析存在一定的局限性。EFDC模型作为一种先进的水动力水..."
+  Run: "在水环境研究领域，传统的监测手段虽然能够提供一定的数据支持，但对于复杂水体环境中的水华暴发机制和影响因子分析存在一定的局" | bold=None | size=None | name=None
+  Run: "EFDC" | bold=None | size=None | name=None
+  Run: "模型作为一种先进的水动力水质模型，能够模拟水体的流动、混合、扩散等物理过程以及污染物在水体中的传输和转化，为研究水华暴发" | bold=None | size=None | name=None
+
+段落45: "EFDC模型的应用方式..."
+  Run: "EFDC" | bold=None | size=None | name=None
+  Run: "模型的应用方式" | bold=None | size=None | name=None
+
+段落46: "先构建与设置模型。根据九洲江下游（广西段）的地理特征和研究需求，将研究区域划分为多个网格单元，采用正交曲线网格划分方式，最终划分为1566个网格，平均网格分辨率..."
+  Run: "先构建与设置模型。" | bold=None | size=None | name=None
+  Run: "根据九洲江下游（广西段）的地理特征和研究需求，将研究区域划分为多个网格单元，采用正交曲线网格划分方式，最终划分为" | bold=None | size=None | name=None
+  Run: "1566" | bold=None | size=None | name=None
+  Run: "个网格，平均网格分辨率为" | bold=None | size=None | name=None
+  Run: "110" | bold=None | size=None | name=None
+  Run: " " | bold=None | size=None | name=None
+  Run: "m×110" | bold=None | size=None | name=None
+  Run: " " | bold=None | size=None | name=None
+  Run: "m" | bold=None | size=None | name=None
+  Run: "，以满足模型对水动力和水质模拟的精" | bold=None | size=None | name=None
+  Run: "度要求。模型采用冷启动方式，初始水位设定为" | bold=None | size=None | name=None
+  Run: "33.08" | bold=None | size=None | name=None
+  Run: " " | bold=None | size=None | name=None
+  Run: "m" | bold=None | size=None | name=None
+  Run: "，初始流速设定为" | bold=None | size=None | name=None
+  Run: "0" | bold=None | size=None | name=None
+  Run: " " | bold=None | size=None | name=None
+  Run: "m/s" | bold=None | size=None | name=None
+  Run: "，并设置动态时间步长，最小步长为" | bold=None | size=None | name=None
+  Run: "0.1" | bold=None | size=None | name=None
+  Run: " " | bold=None | size=None | name=None
+  Run: "s" | bold=None | size=None | name=None
+  Run: "，安全系数为" | bold=None | size=None | name=None
+  Run: "0.1" | bold=None | size=None | name=None
+  Run: "，以确保模型运行的稳定性和效率。" | bold=None | size=None | name=None
+  Run: "再率定与验证模型，" | bold=None | size=None | name=None
+  Run: "分别对车田断面的流量以及山角断面的" | bold=None | size=None | name=None
+  Run: " TP" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "TN " | bold=None | size=None | name=None
+  Run: "等关键水质指标进行率定和验证。采用决定系数（" | bold=None | size=None | name=None
+  Run: "R²" | bold=None | size=None | name=None
+  Run: "）、均方根误差（" | bold=None | size=None | name=None
+  Run: "RMSE" | bold=None | size=None | name=None
+  Run: "）、相对误差和绝对误差等指标对模型的模拟结果进行评估" | bold=None | size=None | name=None
+  Run: "，" | bold=None | size=None | name=None
+  Run: "验证结果显示，流量、" | bold=None | size=None | name=None
+  Run: "TP" | bold=None | size=None | name=None
+  Run: "和" | bold=None | size=None | name=None
+  Run: "TN" | bold=None | size=None | name=None
+  Run: "的相对误差均在" | bold=None | size=None | name=None
+  Run: "30%" | bold=None | size=None | name=None
+  Run: "以内，" | bold=None | size=None | name=None
+  Run: "R²" | bold=None | size=None | name=None
+  Run: "分别为" | bold=None | size=None | name=None
+  Run: "0.93" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "0.76" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "0.73" | bold=None | size=None | name=None
+  Run: "，表明模型能够较好地模拟九洲江下游（广西段）的水动力和水质变化过程，具有较高的准确性和可靠性。" | bold=None | size=None | name=None
+
+段落48: "图 3-1车田断面流量率定验证图..."
+  Run: "图" | bold=None | size=None | name=None
+  Run: " " | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "3" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "-" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "1" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "车田断面流量率定验证图" | bold=None | size=None | name=None
+
+段落50: "图 3-2山角断面TP率定验证图..."
+  Run: "图" | bold=None | size=None | name=None
+  Run: " " | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "3" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "-" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "2" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "山角断面" | bold=None | size=None | name=None
+  Run: "TP" | bold=None | size=None | name=None
+  Run: "率定验证图" | bold=None | size=None | name=None
+
+段落51: "EFDC模型的结果..."
+  Run: "EFDC" | bold=None | size=None | name=None
+  Run: "模型的" | bold=None | size=None | name=None
+  Run: "结果" | bold=None | size=None | name=None
+
+段落52: "通过EFDC模型模拟得到的2020-2022年九洲江下游（广西段）叶绿素a数据，分析其年际变化和年内变化特征。结果显示，2022年水华情况相对较严重，叶绿素a浓..."
+  Run: "通过" | bold=None | size=None | name=None
+  Run: "EFDC" | bold=None | size=None | name=None
+  Run: "模型模拟得到的" | bold=None | size=None | name=None
+  Run: "2020-2022" | bold=None | size=None | name=None
+  Run: "年九洲江下游（广西段）叶绿素" | bold=None | size=None | name=None
+  Run: "a" | bold=None | size=None | name=None
+  Run: "数据，分析其年际变化和年内变化特征。结果显示，" | bold=None | size=None | name=None
+  Run: "2022" | bold=None | size=None | name=None
+  Run: "年水华情况相对较严重，叶绿素" | bold=None | size=None | name=None
+  Run: "a" | bold=None | size=None | name=None
+  Run: "浓度较高；水华暴发主要集中在夏秋两季，秋季水华程度重于夏季，这表明九洲江下游（广西段）水华暴发具有明显的季节性规律。" | bold=None | size=None | name=None
+
+段落53: "AHP模型案例..."
+  Run: "AHP" | bold=None | size=None | name=None
+  Run: "模型案例" | bold=None | size=None | name=None
+
+段落54: "本案例选用詹咏等[4]在《环境科学》期刊发表的《上海污水厂污泥园林绿化利用潜力与复合生态风险评估》。..."
+  Run: "本案例选用" | bold=None | size=None | name=None
+  Run: "詹咏" | bold=None | size=None | name=None
+  Run: "等" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "[4]" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "在《环境科学》期刊发表的《上海污水厂污泥园林绿化利用潜力与复合生态风险评估》。" | bold=None | size=None | name=None
+
+段落55: "AHP模型的应用背景..."
+  Run: "AHP" | bold=None | size=None | name=None
+  Run: "模型的应用背景" | bold=None | size=None | name=None
+
+段落56: "在资源化利用污泥的过程中，必须全面评估污泥的肥力特性和潜在生态风险。污泥中含有重金属和多环芳烃等污染物，这些物质可能对生态系统造成长期的累积性危害。因此，需要一..."
+  Run: "在资源化利用污泥的过程中，必须全面评估污泥的肥力特性和潜在生态风险。污泥中含有重金属和多环芳烃等污染物，这些物质可能对生" | bold=None | size=None | name=None
+  Run: "AHP" | bold=None | size=None | name=None
+  Run: "）作为一种有效的多准则决策工具，能够将复杂的环境问题分解为多个层次，通过成对比较和权重计算，定量评估各污染物的风险贡献。" | bold=None | size=None | name=None
+
+段落57: "AHP模型的应用方式..."
+  Run: "AHP" | bold=None | size=None | name=None
+  Run: "模型的应用方式" | bold=None | size=None | name=None
+
+段落58: "构建了以污泥污染评价为目标层，涵盖8种重金属（Hg、As、Cd、Cr、Cu、Ni、Pb、Zn）和不同环状多环芳烃（二至六环）的指标层。目标层旨在综合评估污泥的污..."
+  Run: "构建了以污泥污染评价为目标层，涵盖" | bold=None | size=None | name=None
+  Run: "8" | bold=None | size=None | name=None
+  Run: "种重金属（" | bold=None | size=None | name=None
+  Run: "Hg" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "As" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "Cd" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "Cr" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "Cu" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "Ni" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "Pb" | bold=None | size=None | name=None
+  Run: "、" | bold=None | size=None | name=None
+  Run: "Zn" | bold=None | size=None | name=None
+  Run: "）和不同环状多环芳烃（二至六环）的指标层。目标层旨在综合评估污泥的污染状况，而准则层由各污染物的具体指标构成。" | bold=None | size=None | name=None
+
+段落59: "采用三标度AHP法确定各指标的权重，构建判断矩阵，依据污泥中污染物的生态风险标准（ERL和ERM）对各指标的重要性进行比较。..."
+  Run: "采用三标度" | bold=None | size=None | name=None
+  Run: "AHP" | bold=None | size=None | name=None
+  Run: "法确定各指标的权重，构建判断矩阵，依据污泥中污染物的生态风险标准（" | bold=None | size=None | name=None
+  Run: "ERL" | bold=None | size=None | name=None
+  Run: "和" | bold=None | size=None | name=None
+  Run: "ERM" | bold=None | size=None | name=None
+  Run: "）对各指标的重要性进行比较。" | bold=None | size=None | name=None
+
+段落60: "表格 1上海污水污泥污染评价指标的权重..."
+  Run: "表格" | bold=None | size=None | name=None
+  Run: " " | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "1" | bold=None | size=None | name=None
+  Run: "" | bold=None | size=None | name=None
+  Run: "上海污水污泥污染评价指标的权重" | bold=None | size=None | name=None
+
+段落61: "基于各污染物的测定值和权重，计算各污水厂污泥的综合风险得分。计算公式为各污染物得分与其权重的乘积之和：..."
+  Run: "基于各污染物的测定值和权重，计算各污水厂污泥的综合风险得分。计算公式为各污染物得分与其权重的乘积之和：" | bold=None | size=None | name=None
+
+段落63: "AHP模型的结果..."
+  Run: "AHP" | bold=None | size=None | name=None
+  Run: "模型的" | bold=None | size=None | name=None
+  Run: "结果" | bold=None | size=None | name=None
+
+段落64: "上海市10个典型污水厂污泥样本的有机质含量范围为251～439 g·kg⁻¹，总养分含量为22.7～51.3 g·kg⁻¹，平均值为41.7 g·kg⁻¹。70..."
+  Run: "上海市" | bold=None | size=None | name=None
+  Run: "10" | bold=None | size=None | name=None
+  Run: "个典型污水厂污泥样本的有机质含量范围为" | bold=None | size=None | name=None
+  Run: "251" | bold=None | size=None | name=None
+  Run: "～" | bold=None | size=None | name=None
+  Run: "439 g·kg⁻¹" | bold=None | size=None | name=None
+  Run: "，总养分含量为" | bold=None | size=None | name=None
+  Run: "22.7" | bold=None | size=None | name=None
+  Run: "～" | bold=None | size=None | name=None
+  Run: "51.3 g·kg⁻¹" | bold=None | size=None | name=None
+  Run: "，平均值为" | bold=None | size=None | name=None
+  Run: "41.7 g·kg⁻¹" | bold=None | size=None | name=None
+  Run: "。" | bold=None | size=None | name=None
+  Run: "70%" | bold=None | size=None | name=None
+  Run: "的污泥样本满足《有机肥料》标准，全部符合园林绿化用泥质标准。综合肥力系数平均为" | bold=None | size=None | name=None
+  Run: "1.8" | bold=None | size=None | name=None
+  Run: "，接近" | bold=None | size=None | name=None
+  Run: "“" | bold=None | size=None | name=None
+  Run: "肥" | bold=None | size=None | name=None
+  Run: "沃" | bold=None | size=None | name=None
+  Run: "”" | bold=None | size=None | name=None
+  Run: "标准，表明污泥具备较高的肥力水平。通过" | bold=None | size=None | name=None
+  Run: "AHP" | bold=None | size=None | name=None
+  Run: "模型计算得出，上海污水厂污泥的综合污染评价得分为" | bold=None | size=None | name=None
+  Run: "0.366" | bold=None | size=None | name=None
+  Run: "，处于较低水平。这表明污泥整体生态风险较小，适合用于园林绿化。然而，长期施用时需关注" | bold=None | size=None | name=None
+  Run: "Hg" | bold=None | size=None | name=None
+  Run: "和" | bold=None | size=None | name=None
+  Run: "Ni" | bold=None | size=None | name=None
+  Run: "的潜在累积风险。" | bold=None | size=None | name=None
+  Run: "AHP" | bold=None | size=None | name=None
+  Run: "模型为污泥的综合风险评估提供了科学依据，有助于优化污泥的资源化利用策略。" | bold=None | size=None | name=None
+
+段落65: "参考文献..."
+  Run: "参考文献" | bold=None | size=None | name=None
+
+段落66: "张京新,蔡庆旺,康子怡,等.渭河流域水质分析评价及预测模型[J/OL].环境科学,1-32[2025-06-15]...."
+  Run: "张京新" | bold=None | size=133350 | name=None
+  Run: "," | bold=None | size=133350 | name=None
+  Run: "蔡庆旺" | bold=None | size=133350 | name=None
+  Run: "," | bold=None | size=133350 | name=None
+  Run: "康子怡" | bold=None | size=133350 | name=None
+  Run: "," | bold=None | size=133350 | name=None
+  Run: "等" | bold=None | size=133350 | name=None
+  Run: "." | bold=None | size=133350 | name=None
+  Run: "渭河流域水质分析评价及预测模型" | bold=None | size=133350 | name=None
+  Run: "[J/OL]." | bold=None | size=133350 | name=None
+  Run: "环境科学" | bold=None | size=133350 | name=None
+  Run: ",1-32[2025-06-15]." | bold=None | size=133350 | name=None
+
+段落67: "刘星宇,张美玲,马子茗.甘肃省1981～2020年植被覆盖度时空变化特征及气候因子分析[J/OL].环境科学,1-11[2025-06-16]...."
+  Run: "刘星宇" | bold=None | size=133350 | name=None
+  Run: "," | bold=None | size=133350 | name=None
+  Run: "张美玲" | bold=None | size=133350 | name=None
+  Run: "," | bold=None | size=133350 | name=None
+  Run: "马子茗" | bold=None | size=133350 | name=None
+  Run: "." | bold=None | size=133350 | name=None
+  Run: "甘肃省" | bold=None | size=133350 | name=None
+  Run: "1981" | bold=None | size=133350 | name=None
+  Run: "～" | bold=None | size=133350 | name=None
+  Run: "2020" | bold=None | size=133350 | name=None
+  Run: "年植被覆盖度时空变化特征及气候因子分析" | bold=None | size=133350 | name=None
+  Run: "[J/OL]." | bold=None | size=133350 | name=None
+  Run: "环境科学" | bold=None | size=133350 | name=None
+  Run: ",1-11[2025-06-16]." | bold=None | size=133350 | name=None
+
+段落68: "刘成真,孙明东,谢培,等.九洲江下游（广西段）水华暴发影响因子分析[J].环境科学与技术,2025,48(01):81-91...."
+  Run: "刘成真" | bold=None | size=133350 | name=None
+  Run: "," | bold=None | size=133350 | name=None
+  Run: "孙明东" | bold=None | size=133350 | name=None
+  Run: "," | bold=None | size=133350 | name=None
+  Run: "谢培" | bold=None | size=133350 | name=None
+  Run: "," | bold=None | size=133350 | name=None
+  Run: "等" | bold=None | size=133350 | name=None
+  Run: "." | bold=None | size=133350 | name=None
+  Run: "九洲江下游（广西段）水华暴发影响因子分析" | bold=None | size=133350 | name=None
+  Run: "[J]." | bold=None | size=133350 | name=None
+  Run: "环境科学与技术" | bold=None | size=133350 | name=None
+  Run: ",2025,48(01):81-91." | bold=None | size=133350 | name=None
+
+段落69: "詹咏,杨超淇,王慧,等.上海污水厂污泥园林绿化利用潜力与复合生态风险评估[J/OL].环境科学,1-19[2025-06-15]...."
+  Run: "詹咏" | bold=None | size=133350 | name=None
+  Run: "," | bold=None | size=133350 | name=None
+  Run: "杨超淇" | bold=None | size=133350 | name=None
+  Run: "," | bold=None | size=133350 | name=None
+  Run: "王慧" | bold=None | size=133350 | name=None
+  Run: "," | bold=None | size=133350 | name=None
+  Run: "等" | bold=None | size=133350 | name=None
+  Run: "." | bold=None | size=133350 | name=None
+  Run: "上海污水厂污泥园林绿化利用潜力与复合生态风险评估" | bold=None | size=133350 | name=None
+  Run: "[J/OL]." | bold=None | size=133350 | name=None
+  Run: "环境科学" | bold=None | size=133350 | name=None
+  Run: ",1-19[2025-06-15]." | bold=None | size=133350 | name=None
